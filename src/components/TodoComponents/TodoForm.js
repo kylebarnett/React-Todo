@@ -30,6 +30,7 @@ class TodoForm extends React.Component {
             placeholder="Add Todo..."
             type="text"
           />
+          <button>Add Todo</button>
         </form>
       </>
     )

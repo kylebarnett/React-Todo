@@ -1,0 +1,7 @@
+.el {
+  color: orange;
+}
+
+.el.completed {
+  text-decoration: line-through;
+}
