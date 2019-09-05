@@ -11,8 +11,15 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      data: dataList
+      data: dataList,
+      search: ''
     }
+  }
+
+  searchTodos = event => {
+    this.setState({
+      search: event.target.value.substr(0, 20)
+    })
   }
 
   toggleItem = id => {
@@ -48,15 +55,22 @@ class App extends React.Component {
     })
   }
   render() {
+    // if you cannot find this.state.search within todo.task, then do not return it
+    // let filteredTodos = this.state.data.filter(todo => {
+    //   return todo.task.indexOf(this.state.search) !== -1
+    // })
     return (
-      <div>
+      <div className="App">
         <h2>Welcome to your Todo App!</h2>
-        <TodoForm addItem={this.addItem} />
+        <TodoForm
+          addItem={this.addItem}
+        />
         <TodoList
           data={this.state.data}
           toggleItem={this.toggleItem}
           clearCompleted={this.clearCompleted}
         />
+        <p>Number of Todos: {this.state.data.length}</p>
       </div>
     );
   }

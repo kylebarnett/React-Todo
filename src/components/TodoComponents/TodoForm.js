@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from 'semantic-ui-react'
 
 class TodoForm extends React.Component {
   constructor() {
@@ -7,6 +8,7 @@ class TodoForm extends React.Component {
       todo: ''
     }
   }
+
   handleChange = event => {
     this.setState({
       todo: event.target.value
@@ -24,12 +26,18 @@ class TodoForm extends React.Component {
     return (
       <>
         <form onSubmit={this.submitItem}>
-          <input
+          <Input
             value={this.state.todo}
             onChange={this.handleChange}
             placeholder="Add Todo..."
             type="text"
           />
+          {/* <Input
+            value={this.props.search}
+            onChange={this.props.searchTodos}
+            placeholder="Search Todos..."
+            type="text"
+          /> */}
           <button>Add Todo</button>
         </form>
       </>
