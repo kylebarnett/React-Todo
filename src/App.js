@@ -39,6 +39,7 @@ class App extends React.Component {
     this.setState({
       data: [...this.state.data, newItem]
     })
+    localStorage.setItem("item", newItem.task)
   }
 
   clearCompleted = () => {
