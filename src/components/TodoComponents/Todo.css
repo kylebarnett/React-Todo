@@ -1,0 +1,63 @@
+.App {
+  margin: 0 auto;
+  width: 650px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #919581;
+  border-radius: 6px;
+}
+
+h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 45px;
+}
+
+p {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+}
+
+button {
+  max-width: 150px;
+  margin: 32px 0;
+  padding: 12px 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #fff1ac;
+  font-family: 'Caveat', cursive;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  }
+
+
+.el {
+  color: orange;
+  font-size: 20px;
+  font-family: 'Caveat', cursive;
+}
+
+.el.completed {
+  text-decoration: line-through;
+  color: red
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #fae3d9;
+  border-radius: 4px;
+  margin: 10px;
+  width: 35%;
+}
